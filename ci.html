@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Bergerak</title>
+    <title>Text Bergerak Smooth</title>
     <style>
         body {
             background-color: black;
@@ -17,17 +17,21 @@
 
         .marquee {
             color: lime;
-            font-size: 2em;
+            font-size: 4em;
+            font-weight: bold;
             white-space: nowrap;
-            animation: marquee 10s linear infinite;
+            animation: marquee 15s ease-in-out infinite;
         }
 
         @keyframes marquee {
             0% {
                 transform: translateX(100%);
             }
-            100% {
+            50% {
                 transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
             }
         }
     </style>
